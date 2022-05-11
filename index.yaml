@@ -1,0 +1,9 @@
+name: ibm-ibm-odf
+type: terraform
+description: Module to provision ibm-odf on ibm
+tags:
+  - tools
+  - devops
+versions: []
+cloudProvider: ibm
+id: github.com/cloud-native-toolkit/terraform-ibm-ibm-odf
