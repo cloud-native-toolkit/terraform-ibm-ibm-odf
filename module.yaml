@@ -1,11 +1,23 @@
-name: ibm-ibm-odf
+name: ibm-odf
 type: terraform
-description: Module to provision ibm-odf on ibm
+description: Module to provision the openshift-data-foundation addon on an IBM ROKS cluster
 tags:
-  - tools
-  - devops
+  - storage
+  - openshift
+  - addon
 versions:
   - platforms: []
-    dependencies: []
-    variables: []
+    providers:
+      - name: ibm
+        source: "ibm-cloud/ibm"
+    dependencies:
+      - id: cluster
+        refs:
+          - source: github.com/terraform-ibm-modules/terraform-ibm-toolkit-ocp-vpc.git
+            version: ">= 1.0.0"
+    variables:
+      - name: cluster_id
+        moduleRef:
+          id: cluster
+          output: id
 cloudProvider: ibm
