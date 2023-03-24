@@ -1,6 +1,4 @@
-#variable "myvariable" {
-#  type        = string
-#  description = "A description of my variable"
-#  default     = ""
-#}
-
+variable "cluster_id" {
+  description = "The id of the ROKS cluster where the addon will be deployed"
+  type        = string
+}
